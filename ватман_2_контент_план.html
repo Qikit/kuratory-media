@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Годовой контент-план</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Nunito', sans-serif; background: #fff; color: #1a1a1a; padding: 40px; max-width: 1100px; margin: 0 auto; }
+@media print { body { padding: 20px; } }
+@media (max-width: 768px) {
+  body { padding: 20px; }
+  h1 { font-size: 28px; }
+  .key-numbers { gap: 20px; }
+  .key-num .num { font-size: 36px; }
+  .rubrics-grid { grid-template-columns: 1fr 1fr; }
+  .calendar { grid-template-columns: 1fr; }
+  .stats-bar { flex-direction: column; align-items: center; }
+  .legend { flex-wrap: wrap; gap: 12px; }
+}
+@media (max-width: 480px) {
+  .rubrics-grid { grid-template-columns: 1fr; }
+}
+
+h1 { text-align: center; font-size: 42px; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+.subtitle { text-align: center; font-size: 16px; color: #888; margin-bottom: 48px; font-weight: 600; }
+h2 { font-size: 24px; font-weight: 900; margin-bottom: 20px; }
+
+/* Key numbers */
+.key-numbers { display: flex; justify-content: center; gap: 40px; margin-bottom: 48px; flex-wrap: wrap; }
+.key-num { text-align: center; }
+.key-num .num { font-size: 48px; font-weight: 900; color: #ec4899; }
+.key-num .label { font-size: 13px; color: #888; font-weight: 700; text-transform: uppercase; }
+
+/* Rubrics */
+.rubrics-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 48px; }
+.rubric {
+  border: 2px solid; border-radius: 14px; padding: 16px 14px; text-align: center;
+}
+.rubric h3 { font-size: 13px; font-weight: 800; margin-bottom: 6px; }
+.rubric .format { font-size: 11px; color: #888; margin-bottom: 4px; }
+.rubric .freq { font-size: 11px; font-weight: 700; }
+
+.rubric.r { border-color: #a855f7; }
+.rubric.r h3 { color: #a855f7; }
+.rubric.r .freq { color: #a855f7; }
+
+.rubric.s { border-color: #22c55e; }
+.rubric.s h3 { color: #22c55e; }
+.rubric.s .freq { color: #22c55e; }
+
+.rubric.c { border-color: #f97316; }
+.rubric.c h3 { color: #f97316; }
+.rubric.c .freq { color: #f97316; }
+
+/* Legend */
+.legend { display: flex; gap: 24px; margin-bottom: 24px; justify-content: center; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; }
+.legend-dot { width: 14px; height: 14px; border-radius: 4px; }
+
+/* Calendar */
+.calendar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.month-card {
+  border: 2px solid #e5e7eb; border-radius: 14px; padding: 16px; min-height: 180px;
+}
+.month-card.hot { border-color: #f97316; background: #fff7ed; }
+.month-card.warm { border-color: #a855f7; background: #faf5ff; }
+.month-name { font-size: 16px; font-weight: 900; margin-bottom: 4px; }
+.month-count { font-size: 11px; font-weight: 700; color: #888; margin-bottom: 10px; }
+.month-posts { list-style: none; }
+.month-posts li {
+  font-size: 11px; padding: 3px 0; border-bottom: 1px solid #f3f4f6;
+  display: flex; gap: 6px;
+}
+.month-posts li:last-child { border-bottom: none; }
+.month-posts .tag {
+  font-weight: 800; font-size: 10px; text-transform: uppercase;
+  white-space: nowrap; flex-shrink: 0;
+}
+.tag-r { color: #a855f7; }
+.tag-s { color: #22c55e; }
+.tag-c { color: #f97316; }
+.tag-b { color: #3b82f6; }
+
+/* Stats bar */
+.stats-bar { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.stat-item {
+  border: 2px solid #e5e7eb; border-radius: 12px; padding: 16px 24px;
+  text-align: center; min-width: 140px;
+}
+.stat-item .val { font-size: 28px; font-weight: 900; }
+.stat-item .lbl { font-size: 11px; color: #888; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<h1>Годовой контент-план</h1>
+<div class="subtitle">Кураторы Московского Политеха &middot; ВКонтакте &middot; 2026/27</div>
+
+<!-- КЛЮЧЕВЫЕ ЦИФРЫ -->
+<div class="key-numbers">
+  <div class="key-num"><div class="num">~85</div><div class="label">постов/год</div></div>
+  <div class="key-num"><div class="num">10</div><div class="label">рубрик</div></div>
+  <div class="key-num"><div class="num">1-2</div><div class="label">поста/неделю</div></div>
+  <div class="key-num"><div class="num">2</div><div class="label">целевых аудитории</div></div>
+</div>
+
+<!-- ЛЕГЕНДА -->
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#a855f7"></div> Рекрутинг</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> Первокурсники</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div> Сообщество</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div> Оба ЦА</div>
+</div>
+
+<!-- РУБРИКАТОР -->
+<h2 style="text-align:center">Рубрикатор</h2>
+<div class="rubrics-grid">
+  <div class="rubric r"><h3>Зачем я стал куратором</h3><div class="format">Карточка + фото</div><div class="freq">2 р/мес &middot; ~16/год</div></div>
+  <div class="rubric r"><h3>Закулисье</h3><div class="format">Фото/видео backstage</div><div class="freq">1-2 р/мес &middot; ~10/год</div></div>
+  <div class="rubric r"><h3>Путь куратора</h3><div class="format">Карусель / лонгрид</div><div class="freq">1 р/мес &middot; ~5/год</div></div>
+  <div class="rubric r"><h3>Набор открыт</h3><div class="format">Пост + анкета</div><div class="freq">По событию &middot; ~4/год</div></div>
+  <div class="rubric s"><h3>Лайфхак от куратора</h3><div class="format">Карточка-совет</div><div class="freq">2 р/мес &middot; ~14/год</div></div>
+  <div class="rubric s"><h3>Гайд первокурсника</h3><div class="format">Статья / карусель</div><div class="freq">По событию &middot; ~4/год</div></div>
+  <div class="rubric c"><h3>Дни рождения</h3><div class="format">Поздравление</div><div class="freq">Ежемесячно &middot; 12/год</div></div>
+  <div class="rubric c"><h3>Отчёт</h3><div class="format">Фото + текст</div><div class="freq">По событию &middot; ~8/год</div></div>
+  <div class="rubric c"><h3>Анонс</h3><div class="format">Пост-приглашение</div><div class="freq">По событию &middot; ~8/год</div></div>
+  <div class="rubric c"><h3>Соц. акция</h3><div class="format">Отчёт / анонс</div><div class="freq">По событию &middot; ~4/год</div></div>
+</div>
+
+<!-- КАЛЕНДАРЬ -->
+<h2 style="text-align:center">Календарь по месяцам</h2>
+<div class="calendar">
+
+  <div class="month-card">
+    <div class="month-name">Июнь</div><div class="month-count">2 поста &middot; мёртвый сезон</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-s">ЛАЙФХАК</span> Пересдачи</li>
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Куратор #1</li>
+    </ul>
+  </div>
+
+  <div class="month-card">
+    <div class="month-name">Июль</div><div class="month-count">2 поста &middot; подготовка стиля</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Куратор #2</li>
+      <li><span class="tag tag-r">АНОНС</span> Тизер набора</li>
+    </ul>
+  </div>
+
+  <div class="month-card warm">
+    <div class="month-name">Август</div><div class="month-count">9 постов &middot; предсезон</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-r">ПУТЬ</span> Как вступить</li>
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Кураторы #3-4</li>
+      <li><span class="tag tag-s">ЛАЙФХАК</span> Перед 1 сентября</li>
+      <li><span class="tag tag-r">НАБОР</span> Анкета, CTA</li>
+      <li><span class="tag tag-r">ЗАКУЛИСЬЕ</span> Подготовка к АК</li>
+      <li><span class="tag tag-s">ГАЙД</span> Куда идти 1 сентября</li>
+    </ul>
+  </div>
+
+  <div class="month-card hot">
+    <div class="month-name">Сентябрь</div><div class="month-count">13 постов &middot; ГОРЯЧИЙ СЕЗОН</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-b">ЗАКУЛИСЬЕ</span> АК день 1-2-3</li>
+      <li><span class="tag tag-b">ОТЧЁТ</span> Итоги АК (ключевой!)</li>
+      <li><span class="tag tag-s">ГАЙД</span> Корпуса, БРС</li>
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Кураторы #5-6</li>
+      <li><span class="tag tag-s">ЛАЙФХАК</span> Столовые</li>
+      <li><span class="tag tag-c">ДР</span> Сентябрь</li>
+    </ul>
+  </div>
+
+  <div class="month-card warm">
+    <div class="month-name">Октябрь</div><div class="month-count">8 постов &middot; не замолчать!</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-s">ЛАЙФХАК</span> Первая сессия, стипендии</li>
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Кураторы #7-8</li>
+      <li><span class="tag tag-r">ЗАКУЛИСЬЕ</span> После АК</li>
+      <li><span class="tag tag-r">ПУТЬ</span> После ШК</li>
+      <li><span class="tag tag-c">ДР</span> Октябрь</li>
+    </ul>
+  </div>
+
+  <div class="month-card">
+    <div class="month-name">Ноябрь</div><div class="month-count">8 постов &middot; ШК старт</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-s">ЛАЙФХАК</span> Зимняя сессия, ресурсы</li>
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Кураторы #9-10</li>
+      <li><span class="tag tag-r">АНОНС</span> Старт ШК</li>
+      <li><span class="tag tag-r">ЗАКУЛИСЬЕ</span> Подготовка ШК</li>
+      <li><span class="tag tag-c">ДР</span> Ноябрь</li>
+    </ul>
+  </div>
+
+  <div class="month-card">
+    <div class="month-name">Декабрь</div><div class="month-count">5 постов &middot; сессия</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-s">ЛАЙФХАК</span> Стратегия сессии</li>
+      <li><span class="tag tag-s">ГАЙД</span> Пересдачи</li>
+      <li><span class="tag tag-b">ОТЧЁТ</span> Итоги полугодия</li>
+      <li><span class="tag tag-c">ДР</span> Декабрь</li>
+      <li><span class="tag tag-c">АНОНС</span> Новый год</li>
+    </ul>
+  </div>
+
+  <div class="month-card">
+    <div class="month-name">Январь</div><div class="month-count">4 поста &middot; каникулы</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-s">ЛАЙФХАК</span> Ритм после каникул</li>
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Куратор #11</li>
+      <li><span class="tag tag-r">АНОНС</span> 2-й поток ШК</li>
+      <li><span class="tag tag-r">ЗАКУЛИСЬЕ</span> Планёрка</li>
+    </ul>
+  </div>
+
+  <div class="month-card warm">
+    <div class="month-name">Февраль</div><div class="month-count">8 постов &middot; ШК + донорство</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-r">ПУТЬ</span> Обучение в ШК</li>
+      <li><span class="tag tag-r">НАБОР</span> 2-й поток ШК</li>
+      <li><span class="tag tag-b">СОЦ</span> День донора</li>
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Куратор #12</li>
+      <li><span class="tag tag-r">ЗАКУЛИСЬЕ</span> ШК 2-й поток</li>
+      <li><span class="tag tag-c">ДР</span> Февраль</li>
+    </ul>
+  </div>
+
+  <div class="month-card warm">
+    <div class="month-name">Март</div><div class="month-count">7 постов &middot; ШОКД</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Куратор #13</li>
+      <li><span class="tag tag-b">СОЦ</span> Код донора</li>
+      <li><span class="tag tag-r">ЗАКУЛИСЬЕ</span> Подготовка ШОКД</li>
+      <li><span class="tag tag-b">ОТЧЁТ</span> ШОКД (ключевой!)</li>
+      <li><span class="tag tag-r">ПУТЬ</span> Как выезд меняет</li>
+      <li><span class="tag tag-c">ДР</span> Март</li>
+    </ul>
+  </div>
+
+  <div class="month-card hot">
+    <div class="month-name">Апрель</div><div class="month-count">8 постов &middot; РЕКРУТИНГ</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-r">НАБОР</span> Основной набор!</li>
+      <li><span class="tag tag-r">ПУТЬ</span> Что получишь за год</li>
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Кураторы #14-15</li>
+      <li><span class="tag tag-r">ЗАКУЛИСЬЕ</span> Планирование</li>
+      <li><span class="tag tag-c">АНОНС</span> Выпускной ШК</li>
+      <li><span class="tag tag-c">ДР</span> Апрель</li>
+    </ul>
+  </div>
+
+  <div class="month-card warm">
+    <div class="month-name">Май</div><div class="month-count">7 постов &middot; итоги года</div>
+    <ul class="month-posts">
+      <li><span class="tag tag-s">ЛАЙФХАК</span> Летняя сессия</li>
+      <li><span class="tag tag-r">ИСТОРИЯ</span> Куратор #16</li>
+      <li><span class="tag tag-b">ОТЧЁТ</span> Выпускной ШК</li>
+      <li><span class="tag tag-b">ОТЧЁТ</span> ИТОГИ ГОДА (ключевой!)</li>
+      <li><span class="tag tag-r">НАБОР</span> Напоминание</li>
+      <li><span class="tag tag-c">ДР</span> Май</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ИТОГОВАЯ СТАТИСТИКА -->
+<h2 style="text-align:center;margin-bottom:20px">Итого за год</h2>
+<div class="stats-bar">
+  <div class="stat-item"><div class="val" style="color:#a855f7">~16</div><div class="lbl">Историй</div></div>
+  <div class="stat-item"><div class="val" style="color:#22c55e">~14</div><div class="lbl">Лайфхаков</div></div>
+  <div class="stat-item"><div class="val" style="color:#f97316">12</div><div class="lbl">ДР</div></div>
+  <div class="stat-item"><div class="val" style="color:#3b82f6">~10</div><div class="lbl">Закулисье</div></div>
+  <div class="stat-item"><div class="val" style="color:#ec4899">~8</div><div class="lbl">Отчётов</div></div>
+  <div class="stat-item"><div class="val" style="color:#1a1a1a">~85</div><div class="lbl">Всего</div></div>
+</div>
+
+</body>
+</html>

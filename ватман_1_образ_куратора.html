@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Образ куратора</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Nunito', sans-serif; background: #fff; color: #1a1a1a; padding: 40px; max-width: 1100px; margin: 0 auto; }
+@media print { body { padding: 20px; } }
+@media (max-width: 768px) {
+  body { padding: 20px; }
+  h1 { font-size: 28px; }
+  .pillars { grid-template-columns: 1fr; }
+  .identity-grid { grid-template-columns: 1fr; }
+  .character-traits { gap: 6px; }
+  .trait { font-size: 12px; padding: 6px 14px; }
+  .splash-dots { flex-direction: column; align-items: center; }
+}
+
+h1 {
+  text-align: center; font-size: 42px; font-weight: 900;
+  margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.subtitle { text-align: center; font-size: 16px; color: #888; margin-bottom: 48px; font-weight: 600; }
+
+/* Три столпа */
+.pillars { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 48px; }
+.pillar {
+  border: 3px solid; border-radius: 20px; padding: 28px 24px; text-align: center;
+}
+.pillar-icon { font-size: 36px; margin-bottom: 12px; }
+.pillar h2 { font-size: 22px; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; }
+.pillar blockquote {
+  font-size: 14px; font-style: italic; color: #555;
+  margin-bottom: 16px; line-height: 1.5;
+  border: none; padding: 0;
+}
+.pillar ul { list-style: none; text-align: left; }
+.pillar li { font-size: 14px; padding: 4px 0 4px 20px; position: relative; }
+.pillar li::before { content: ''; position: absolute; left: 4px; top: 11px; width: 8px; height: 8px; border-radius: 50%; }
+
+.pillar.blue { border-color: #3b82f6; }
+.pillar.blue h2 { color: #3b82f6; }
+.pillar.blue li::before { background: #3b82f6; }
+
+.pillar.pink { border-color: #ec4899; }
+.pillar.pink h2 { color: #ec4899; }
+.pillar.pink li::before { background: #ec4899; }
+
+.pillar.orange { border-color: #f97316; }
+.pillar.orange h2 { color: #f97316; }
+.pillar.orange li::before { background: #f97316; }
+
+/* Мы / Мы не */
+.identity-section { margin-bottom: 48px; }
+.identity-section h2 { font-size: 24px; font-weight: 900; text-align: center; margin-bottom: 24px; }
+.identity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.identity-col { border: 2px solid; border-radius: 16px; padding: 24px; }
+.identity-col h3 { font-size: 18px; font-weight: 800; margin-bottom: 16px; text-align: center; }
+.identity-col.yes { border-color: #22c55e; }
+.identity-col.yes h3 { color: #22c55e; }
+.identity-col.no { border-color: #ccc; }
+.identity-col.no h3 { color: #999; }
+.identity-col ul { list-style: none; }
+.identity-col li { font-size: 15px; padding: 8px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px; }
+.identity-col li:last-child { border-bottom: none; }
+.identity-col.yes li::before { content: '\2713'; color: #22c55e; font-weight: 800; font-size: 16px; }
+.identity-col.no li::before { content: '\2717'; color: #ccc; font-weight: 800; font-size: 16px; }
+.identity-col.no li { color: #999; }
+
+/* Характер */
+.character {
+  border: 2px solid #a855f7; border-radius: 16px; padding: 28px;
+  margin-bottom: 48px; text-align: center;
+}
+.character h2 { font-size: 20px; font-weight: 800; color: #a855f7; margin-bottom: 16px; }
+.character-traits { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.trait {
+  border: 2px solid #e9d5ff; border-radius: 100px; padding: 8px 20px;
+  font-size: 14px; font-weight: 700; color: #7c3aed;
+}
+
+/* Маскот */
+.mascot {
+  border: 3px dashed #ddd; border-radius: 20px; padding: 32px;
+  text-align: center; margin-bottom: 20px;
+}
+.mascot h2 { font-size: 22px; font-weight: 900; margin-bottom: 12px; }
+.mascot p { font-size: 15px; color: #555; margin-bottom: 16px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.splash-dots { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.splash-dot {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 700;
+}
+.splash-dot span { width: 24px; height: 24px; border-radius: 50%; display: inline-block; }
+</style>
+</head>
+<body>
+
+<h1>Образ куратора</h1>
+<div class="subtitle">Кураторы Московского Политеха &middot; Медиа-отдел &middot; ШОКД 2026</div>
+
+<!-- ТРИ СТОЛПА -->
+<div class="pillars">
+  <div class="pillar blue">
+    <div class="pillar-icon">&#9889;</div>
+    <h2>Прокачка</h2>
+    <blockquote>&laquo;Кураторство даёт навыки, которые не даст ни один курс&raquo;</blockquote>
+    <ul>
+      <li>Организация мероприятий на 1000+ человек</li>
+      <li>Публичные выступления</li>
+      <li>Работа в команде под дедлайном</li>
+      <li>Управление конфликтами</li>
+      <li>Лидерство и ответственность</li>
+    </ul>
+  </div>
+
+  <div class="pillar pink">
+    <div class="pillar-icon">&#10084;&#65039;</div>
+    <h2>Люди</h2>
+    <blockquote>&laquo;Люди, которые остаются с тобой после выпуска&raquo;</blockquote>
+    <ul>
+      <li>Команда единомышленников</li>
+      <li>Друзья, которые понимают без слов</li>
+      <li>Поддержка в любой ситуации</li>
+      <li>Чувство принадлежности</li>
+      <li>Связи с выпускниками</li>
+    </ul>
+  </div>
+
+  <div class="pillar orange">
+    <div class="pillar-icon">&#9733;</div>
+    <h2>Миссия</h2>
+    <blockquote>&laquo;Ты помнишь, каково быть потерянным первокурсником, и решаешь это изменить&raquo;</blockquote>
+    <ul>
+      <li>Меняешь жизнь десятков людей</li>
+      <li>Тебя запомнят на годы</li>
+      <li>Социальные инициативы</li>
+      <li>Формируешь образ университета</li>
+      <li>Ощутимый результат</li>
+    </ul>
+  </div>
+</div>
+
+<!-- МЫ / МЫ НЕ -->
+<div class="identity-section">
+  <h2>Кто мы</h2>
+  <div class="identity-grid">
+    <div class="identity-col yes">
+      <h3>&#10003; Мы</h3>
+      <ul>
+        <li>Наставники и старшие друзья</li>
+        <li>Живая команда с характером</li>
+        <li>Профессионалы, которые учатся</li>
+        <li>Семья с историей (с 2005 года)</li>
+        <li>Люди, которые делают, а не говорят</li>
+      </ul>
+    </div>
+    <div class="identity-col no">
+      <h3>&#10007; Мы &mdash; не</h3>
+      <ul>
+        <li>Формальные кураторы из деканата</li>
+        <li>Безликая студенческая организация</li>
+        <li>Активисты ради активности</li>
+        <li>Временный проект на один сезон</li>
+        <li>Те, кто только постит отчёты</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ХАРАКТЕР БРЕНДА -->
+<div class="character">
+  <h2>Характер бренда (если бы кураторы были человеком)</h2>
+  <div class="character-traits">
+    <div class="trait">20-22 года</div>
+    <div class="trait">Говорит просто и по делу</div>
+    <div class="trait">Шутит, но знает, когда серьёзно</div>
+    <div class="trait">Готов помочь, но не навязывается</div>
+    <div class="trait">Уверен, но не высокомерен</div>
+    <div class="trait">Энергичный, но не суетливый</div>
+  </div>
+</div>
+
+<!-- МАСКОТ -->
+<div class="mascot">
+  <h2>&#129427; Маскот: зебра Арчер</h2>
+  <p>Маленькая зебра с разноцветными кляксами по телу. Каждая клякса &mdash; цвет отдела кураторства. Арчер = многогранность: не одна функция, а целая палитра.</p>
+  <div class="splash-dots">
+    <div class="splash-dot"><span style="background:#3b82f6"></span> Тренерство</div>
+    <div class="splash-dot"><span style="background:#f97316"></span> Events</div>
+    <div class="splash-dot"><span style="background:#ec4899"></span> Медиа</div>
+    <div class="splash-dot"><span style="background:#22c55e"></span> HR</div>
+  </div>
+</div>
+
+</body>
+</html>
